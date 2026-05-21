@@ -336,19 +336,7 @@ ul {
     gap: 24px;
 }
 
-.btn-phone {
-    font-weight: 400;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
-    white-space: nowrap; /* Prevent wrapping */
-}
-
-.btn-phone i {
-    color: var(--secondary);
-}
+/* Removed btn-phone */
 
 .menu-toggle {
     display: none;
@@ -1105,12 +1093,11 @@ ul {
 }
 
 .footer-col h4 {
-    color: #fff;
-    font-family: var(--font-body);
-    font-size: 1.1rem;
+    color: #ffffff; /* Brightened for visibility */
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
     margin-bottom: 25px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .footer-col ul li {
@@ -1162,13 +1149,19 @@ ul {
    ========================================================================== */
 .mobile-sticky-bar {
     display: none; /* Hidden on desktop */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--bg-white);
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
-    z-index: 1500;
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-white);
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+        z-index: 1500;
+    }
 }
 
 .mobile-sticky-bar .sticky-btn {
@@ -1402,6 +1395,7 @@ ul {
     
     .footer-container {
         grid-template-columns: 1fr 1fr;
+        gap: 40px;
     }
 }
 
