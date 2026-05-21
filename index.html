@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina Spa & Wellness | Relax, Refresh, and Glow</title>
+    <meta name="description" content="Experience professional spa treatments, facials, massage therapy, and wellness services designed to help you feel relaxed, confident, and beautifully refreshed.">
+    <meta name="keywords" content="spa, facial, massage therapy, wellness, body treatments, waxing, skin care">
+    <meta name="author" content="Lumina Spa & Wellness">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lumina Spa & Wellness">
+    <meta property="og:description" content="Experience professional spa treatments designed to help you feel relaxed and beautifully refreshed.">
+    <meta property="og:image" content="assets/spa-hero-bg.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Playfair Display (Serif) & Lato (Sans-serif) for Clean Wellness aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-light">LUMINA</span><span class="logo-accent">SPA</span>
+            </a>
+            
+            <nav class="nav" id="main-nav">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#specials" class="nav-link">Specials</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+15551234567" class="btn-phone"><i class="fa-solid fa-phone"></i> <span>Call Now</span></a>
+                <button class="btn btn-primary btn-book">Book Appointment</button>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="#" class="mobile-link">Home</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#specials" class="mobile-link">Specials</a>
+            <a href="#reviews" class="mobile-link">Reviews</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="tel:+15551234567" class="mobile-phone"><i class="fa-solid fa-phone"></i> Call: (555) 123-4567</a>
+            <button class="btn btn-primary btn-book" style="width: 100%; margin-top: 1rem;">Book Appointment</button>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Holistic Wellness & Beauty</span>
+                    <h1 class="hero-title">Relax, Refresh,<br>and <span class="text-serif-italic">Glow</span></h1>
+                    <p class="hero-description">Experience professional spa treatments designed to help you feel relaxed, confident, and beautifully refreshed.</p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-book">Book Appointment</button>
+                        <a href="#services" class="btn btn-outline">View Services</a>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <span><i class="fa-solid fa-leaf"></i> Licensed Estheticians</span>
+                        <span><i class="fa-solid fa-droplet"></i> Clean & Relaxing Space</span>
+                        <span><i class="fa-regular fa-face-smile"></i> Personalized Treatments</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/spa-hero-bg.png" alt="Relaxing Spa Facial Treatment" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Info Bar -->
+        <section class="quick-info">
+            <div class="container info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+                    <div class="info-details">
+                        <h3>Hours</h3>
+                        <p>Mon - Sat: 10:00 AM - 7:00 PM<br>Sunday: By Appointment</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-details">
+                        <h3>Location</h3>
+                        <p>123 Wellness Ave<br>Los Angeles, CA 90014</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-details">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    </div>
+                </div>
+                <div class="info-card highlight">
+                    <div class="info-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                    <div class="info-details">
+                        <h3>Booking</h3>
+                        <p>Online Booking Available</p>
+                        <button class="btn-text btn-book">Book Now <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">What We Offer</span>
+                    <h2 class="section-title">Our Spa Services</h2>
+                    <p class="section-description">Personalized spa treatments for your skin, body, and mind. From relaxing facials to soothing massage therapy, our services are designed to help you unwind and restore balance.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/service-facial.jpg" alt="Facial Treatments">
+                        </div>
+                        <div class="service-content">
+                            <h3>Facial Treatments</h3>
+                            <p>Deep cleansing, hydration, anti-aging, brightening, acne care, and customized facials tailored to your skin type.</p>
+                            <div class="service-footer">
+                                <span class="price">Starting at $75</span>
+                                <button class="btn btn-outline-small btn-book">Book</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/service-massage.jpg" alt="Massage Therapy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Massage Therapy</h3>
+                            <p>Relaxing body massage, deep tissue, hot stone, aromatherapy, and stress-relief treatments.</p>
+                            <div class="service-footer">
+                                <span class="price">Starting at $85</span>
+                                <button class="btn btn-outline-small btn-book">Book</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/service-body.jpg" alt="Body Treatments">
+                        </div>
+                        <div class="service-content">
+                            <h3>Body Treatments</h3>
+                            <p>Body scrub, body wrap, detox treatment, back facial, and skin smoothing services.</p>
+                            <div class="service-footer">
+                                <span class="price">Starting at $95</span>
+                                <button class="btn btn-outline-small btn-book">Book</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/service-waxing.jpg" alt="Waxing Services">
+                        </div>
+                        <div class="service-content">
+                            <h3>Waxing Services</h3>
+                            <p>Professional waxing for face, arms, legs, underarms, bikini, and full body in a comfortable environment.</p>
+                            <div class="service-footer">
+                                <span class="price">Starting at $15</span>
+                                <button class="btn btn-outline-small btn-book">Book</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/service-lash.jpg" alt="Lash & Brow">
+                        </div>
+                        <div class="service-content">
+                            <h3>Lash & Brow</h3>
+                            <p>Lash lift, brow shaping, brow tinting, and professional beauty enhancement services.</p>
+                            <div class="service-footer">
+                                <span class="price">Starting at $35</span>
+                                <button class="btn btn-outline-small btn-book">Book</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="assets/service-packages.jpg" alt="Skin Care Packages">
+                        </div>
+                        <div class="service-content">
+                            <h3>Skin Care Packages</h3>
+                            <p>Personalized comprehensive treatment plans for glowing, healthy, and refreshed skin all year round.</p>
+                            <div class="service-footer">
+                                <span class="price">Custom pricing</span>
+                                <button class="btn btn-outline-small btn-book">Inquire</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-cta text-center">
+                    <button class="btn btn-primary btn-book">View Full Service Menu</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Treatment Section -->
+        <section class="featured-treatment">
+            <div class="container featured-container">
+                <div class="featured-visual">
+                    <img src="assets/featured-glow.jpg" alt="Signature Glow Facial">
+                </div>
+                <div class="featured-content">
+                    <span class="section-subtitle">Featured Service</span>
+                    <h2 class="section-title">Signature Glow Facial</h2>
+                    <p class="section-description">A relaxing facial treatment designed to deeply cleanse, hydrate, and refresh your skin for a healthy, natural glow. Perfect for all skin types and customized to your specific needs.</p>
+                    
+                    <ul class="treatment-list">
+                        <li><i class="fa-solid fa-check"></i> Deep cleansing & steaming</li>
+                        <li><i class="fa-solid fa-check"></i> Gentle exfoliation & extractions</li>
+                        <li><i class="fa-solid fa-check"></i> Custom hydrating mask</li>
+                        <li><i class="fa-solid fa-check"></i> Relaxing facial & décolleté massage</li>
+                        <li><i class="fa-solid fa-check"></i> Luminous skin glow finish</li>
+                    </ul>
+                    
+                    <button class="btn btn-secondary btn-book">Book This Treatment</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotion / Special Offer -->
+        <section class="specials" id="specials">
+            <div class="container">
+                <div class="promo-banner">
+                    <div class="promo-text">
+                        <span class="promo-badge">Limited Time</span>
+                        <h2>New Client Special</h2>
+                        <p>Enjoy <strong>10% off</strong> your first spa treatment with us. Experience the ultimate relaxation and discover your natural glow.</p>
+                    </div>
+                    <div class="promo-action">
+                        <button class="btn btn-white btn-book">Claim Offer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-us">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Why Clients Choose Lumina</h2>
+                </div>
+                
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>Licensed Professionals</h3>
+                        <p>Our team provides professional spa services with care, expertise, and attention to detail.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="icon"><i class="fa-solid fa-spa"></i></div>
+                        <h3>Clean & Relaxing</h3>
+                        <p>Enjoy a peaceful, comfortable, and rigorously clean space from the moment you arrive.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+                        <h3>Personalized Care</h3>
+                        <p>Each service is thoughtfully designed around your unique skin, body, and wellness needs.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="icon"><i class="fa-regular fa-star"></i></div>
+                        <h3>Visible Results</h3>
+                        <p>We focus on high-quality treatments that help you feel refreshed, confident, and renewed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container about-container">
+                <div class="about-content">
+                    <span class="section-subtitle">Our Story</span>
+                    <h2 class="section-title">Welcome to Lumina Spa</h2>
+                    <p>At Lumina Spa & Wellness, we believe self-care should feel relaxing, personal, and results-driven. Our spa offers professional facials, massage therapy, body treatments, waxing, and beauty services in a calm and welcoming environment.</p>
+                    <p>Whether you are here to refresh your skin, relieve stress, or enjoy a peaceful moment for yourself, our dedicated team is here to help you look and feel your absolute best.</p>
+                    
+                    <button class="btn btn-outline btn-book">Book Your Visit</button>
+                </div>
+                <div class="about-visual">
+                    <img src="assets/spa-interior.png" alt="Lumina Spa Interior" class="main-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Process -->
+        <section class="process">
+            <div class="container text-center">
+                <span class="section-subtitle">What to Expect</span>
+                <h2 class="section-title">Your Spa Experience</h2>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Consultation</h3>
+                        <p>We listen to your needs, assess your skin, and recommend the right customized treatment for you.</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Relaxing Treatment</h3>
+                        <p>Enjoy a peaceful and transformative service in our clean, comfortable, and tranquil spa environment.</p>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Feel Refreshed</h3>
+                        <p>Leave feeling completely relaxed, confident, and beautifully renewed from the inside out.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Inside Our Spa</h2>
+                    <p class="section-description">Take a glimpse into our calming spaces and premium wellness treatments.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <img src="assets/gallery-1.jpg" alt="Spa Treatment Room" class="gallery-img">
+                    <img src="assets/gallery-2.jpg" alt="Skincare Products" class="gallery-img">
+                    <img src="assets/gallery-3.jpg" alt="Relaxing Facial" class="gallery-img">
+                    <img src="assets/gallery-4.jpg" alt="Hot Stone Massage" class="gallery-img">
+                    <img src="assets/gallery-5.jpg" alt="Spa Towels and Decor" class="gallery-img">
+                    <img src="assets/gallery-6.jpg" alt="Aromatherapy" class="gallery-img">
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="#" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> Follow Us on Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Testimonials</span>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"Such a relaxing experience. The facial was amazing and my skin felt so refreshed afterward. Highly recommend Lumina!"</p>
+                        <span class="author">- Emily R.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"The deep tissue massage completely relieved my back pain. The atmosphere is so peaceful and clean."</p>
+                        <span class="author">- Sarah T.</span>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"I love their signature glow facial. The esthetician was so gentle and professional. I will definitely be coming back."</p>
+                        <span class="author">- Jessica M.</span>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <button class="btn btn-outline">Read More Reviews on Google</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking CTA -->
+        <section class="booking-cta">
+            <div class="container text-center">
+                <h2>Ready to Relax and Glow?</h2>
+                <p>Book your facial, massage, waxing, or spa treatment today and enjoy a peaceful self-care experience.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-book">Book Appointment</button>
+                    <a href="tel:+15551234567" class="btn btn-outline-white">Call Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location / Contact -->
+        <section class="contact" id="contact">
+            <div class="container contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title">Visit Lumina Spa</h2>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong> 123 Wellness Ave, Los Angeles, CA 90014</li>
+                        <li><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> (555) 123-4567</li>
+                        <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@luminaspa.com</li>
+                        <li><i class="fa-regular fa-clock"></i> <strong>Hours:</strong> Mon-Sat: 10am - 7pm | Sun: By Appointment</li>
+                    </ul>
+                    <p class="parking-info"><i class="fa-solid fa-square-parking"></i> Free parking available at the rear entrance. Walk-ins welcome based on availability.</p>
+                </div>
+                <div class="contact-map">
+                    <!-- Google Map Placeholder -->
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6980385906233!2d-118.25700412353153!3d34.05156711776949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b5b5c96767%3A0x7d0dbcd0227cd90b!2sDowntown%20Los%20Angeles%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">LUMINA SPA</a>
+                <p>Professional spa offering facials, massage therapy, body treatments, waxing, lash, brow, and skincare services in Los Angeles, CA.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#specials">Specials</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>123 Wellness Ave, LA, CA</p>
+                <p>(555) 123-4567</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Lumina Spa & Wellness. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-sticky-bar">
+        <button class="sticky-btn btn-book">Book Now</button>
+        <a href="tel:+15551234567" class="sticky-btn"><i class="fa-solid fa-phone"></i> Call</a>
+        <a href="#contact" class="sticky-btn"><i class="fa-solid fa-location-dot"></i> Directions</a>
+    </div>
+
+    <!-- Booking Modal Placeholder -->
+    <div class="booking-modal-overlay" id="booking-modal">
+        <div class="booking-modal-card">
+            <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <h2>Book Your Spa Treatment</h2>
+            <p>Schedule your relaxing experience today.</p>
+            <!-- Form mock up -->
+            <form style="margin-top: 20px;">
+                <div style="margin-bottom: 15px;">
+                    <label>Select Service</label>
+                    <select style="width: 100%; padding: 10px; margin-top: 5px;">
+                        <option>Signature Glow Facial</option>
+                        <option>Deep Tissue Massage</option>
+                        <option>Body Scrub</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" style="width: 100%;">Continue to Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
