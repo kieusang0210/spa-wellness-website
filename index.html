@@ -3,28 +3,1757 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina Spa & Wellness | Relax, Refresh, and Glow</title>
-    <meta name="description" content="Experience professional spa treatments, facials, massage therapy, and wellness services designed to help you feel relaxed, confident, and beautifully refreshed.">
-    <meta name="keywords" content="spa, facial, massage therapy, wellness, body treatments, waxing, skin care">
+    <title>Lumina Spa & Wellness | Relax deeply. Glow naturally.</title>
+    <meta name="description" content="Experience professional, premium spa treatments, facials, massage therapy, and wellness packages in a peaceful environment designed for complete rejuvenation.">
+    <meta name="keywords" content="luxury spa, facials, massage therapy, wellness, body treatments, waxing, skin care, Los Angeles wellness">
     <meta name="author" content="Lumina Spa & Wellness">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Lumina Spa & Wellness">
-    <meta property="og:description" content="Experience professional spa treatments designed to help you feel relaxed and beautifully refreshed.">
+    <meta property="og:title" content="Lumina Spa & Wellness | Relax deeply. Glow naturally.">
+    <meta property="og:description" content="Experience premium facials, massage therapy, and body treatments designed to restore your skin and body.">
     <meta property="og:image" content="assets/spa-hero-bg.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Playfair Display (Serif) & Lato (Sans-serif) for Clean Wellness aesthetic -->
+    <!-- Playfair Display (Serif) & Lato (Sans-serif) for Clean Luxury Wellness aesthetic -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+/* ==========================================================================
+   LUMINA SPA & WELLNESS - PREMIUM LUXURY THEME
+   ========================================================================== */
+
+:root {
+    /* Luxury Refactored Variables */
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --surface-soft: #f3eee8;
+    --primary: #8c9b8f;
+    --primary-dark: #657568;
+    --accent: #c8ad91;
+    --text: #2f2d2a;
+    --muted: #78736c;
+    --border: rgba(47,45,42,0.10);
+    --shadow-soft: 0 18px 50px rgba(43,38,32,0.08);
+    --shadow-card: 0 10px 30px rgba(43,38,32,0.06);
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+    
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --header-height: 76px;
+    
+    /* Organic Radii */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-arch: 200px 200px 16px 16px;
+    --radius-pill: 999px;
+    
+    /* Fluid Transitions */
+    --transition-fast: 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    line-height: 1.3;
+}
+
+.text-serif-italic {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    padding-right: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-subtitle {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.section-title {
+    margin-bottom: 16px;
+}
+
+.section-description {
+    max-width: 600px;
+    margin: 0 auto 48px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   BUTTONS (Tactile & Luxurious)
+   ========================================================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--surface);
+    box-shadow: 0 4px 14px rgba(140, 155, 143, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(140, 155, 143, 0.35);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    background-color: var(--surface);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: var(--surface);
+    box-shadow: 0 4px 14px rgba(200, 173, 145, 0.25);
+}
+
+.btn-accent:hover {
+    background-color: #bca083;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 173, 145, 0.35);
+}
+
+.btn-outline-white {
+    background-color: transparent;
+    color: var(--surface);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btn-outline-white:hover {
+    background-color: var(--surface);
+    color: var(--text);
+    transform: translateY(-2px);
+}
+
+.btn-outline-small {
+    padding: 8px 20px;
+    font-size: 0.75rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-outline-small:hover {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: var(--surface);
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-fast);
+}
+
+.btn-text i {
+    transition: transform var(--transition-fast);
+}
+
+.btn-text:hover {
+    color: var(--primary-dark);
+}
+
+.btn-text:hover i {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   HEADER (Semi-transparent with Blur)
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: rgba(251, 250, 247, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    transition: all var(--transition-fast);
+    border-bottom: 1px solid var(--border);
+}
+
+.header.scrolled {
+    background-color: rgba(251, 250, 247, 0.95);
+    box-shadow: 0 4px 20px rgba(43, 38, 32, 0.04);
+    height: 66px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--text);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 1px;
+    background-color: var(--primary);
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 24px;
+    height: 1.5px;
+    background-color: var(--text);
+    transition: var(--transition-fast);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(251, 250, 247, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 100px 30px 40px;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-link {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text);
+}
+
+.mobile-link:hover {
+    color: var(--primary);
+}
+
+.mobile-phone {
+    margin-top: 24px;
+    font-size: 1rem;
+    color: var(--muted);
+}
+
+/* ==========================================================================
+   HERO SECTION (2-Column Editorial)
+   ========================================================================== */
+.hero {
+    padding-top: calc(var(--header-height) + 64px);
+    padding-bottom: 88px;
+    background: linear-gradient(180deg, rgba(243, 238, 232, 0.4) 0%, rgba(251, 250, 247, 0) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-subtitle {
+    margin-bottom: 12px;
+}
+
+.hero-title {
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.hero-features span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-features i {
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+/* Organic Arch Image & Badge */
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-wrapper {
+    border-radius: var(--radius-arch);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+    aspect-ratio: 4/5;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.hero-image-wrapper:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.hero-badge {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: heroFloat 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+@keyframes heroFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.hero-badge i {
+    font-size: 1.4rem;
+    color: var(--accent);
+}
+
+.hero-badge-text h4 {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.hero-badge-text p {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
+
+/* ==========================================================================
+   QUICK INFO BAR
+   ========================================================================== */
+.quick-info {
+    position: relative;
+    z-index: 10;
+    margin-top: -44px;
+    padding: 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.info-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.info-card.highlight {
+    background-color: var(--surface-soft);
+    border-color: var(--accent);
+}
+
+.info-icon {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-top: 2px;
+}
+
+.info-details h3 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.info-details p {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   SPACING SYSTEM
+   ========================================================================== */
+section {
+    padding: 88px 0;
+}
+
+/* ==========================================================================
+   SERVICES (Luxurious & Balanced Cards)
+   ========================================================================== */
+.services {
+    background-color: var(--bg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.service-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+    border-color: var(--primary);
+}
+
+.service-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.service-content p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 24px;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 18px;
+}
+
+.service-footer .price {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   FEATURED SERVICE
+   ========================================================================== */
+.featured-treatment {
+    background-color: var(--surface-soft);
+}
+
+.featured-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.featured-visual {
+    position: relative;
+}
+
+.featured-visual img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: var(--radius-arch);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+    position: relative;
+    z-index: 2;
+}
+
+.featured-visual::before {
+    content: '';
+    position: absolute;
+    top: -20px; left: -20px;
+    width: 100%; height: 100%;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-arch);
+    z-index: 1;
+}
+
+.featured-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.featured-badge {
+    background-color: rgba(200, 173, 145, 0.15);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 16px;
+}
+
+.treatment-list {
+    margin: 24px 0 32px;
+    width: 100%;
+}
+
+.treatment-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.treatment-list i {
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.treatment-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.treatment-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.treatment-meta i {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   PROMOTION (Elegant Banner)
+   ========================================================================== */
+.specials {
+    background-color: var(--bg);
+}
+
+.promo-banner {
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface-soft) 100%);
+    border-radius: var(--radius-lg);
+    padding: 56px 64px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 48px;
+    align-items: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+}
+
+.promo-badge {
+    background-color: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 6px 16px;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.promo-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.promo-text p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.promo-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ==========================================================================
+   WHY US (Concise Icons & Clean Layout)
+   ========================================================================== */
+.why-us {
+    background-color: var(--surface);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.why-card {
+    text-align: center;
+    padding: 36px 24px;
+    border-radius: var(--radius-lg);
+    background: var(--bg);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--border);
+}
+
+.why-card:hover {
+    background: var(--surface);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-4px);
+}
+
+.why-card .icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.why-card p {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   ABOUT (Story-Driven & Elegant)
+   ========================================================================== */
+.about {
+    background-color: var(--bg);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.about-visual {
+    position: relative;
+}
+
+.about-visual .main-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+    display: block;
+}
+
+.about-badge {
+    position: absolute;
+    top: 24px;
+    right: -20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   PROCESS (Timeline Steps)
+   ========================================================================== */
+.process {
+    background-color: var(--surface);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    margin-top: 56px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: rgba(200, 173, 145, 0.25);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.step h3 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.step p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   GALLERY (Editorial Grid)
+   ========================================================================== */
+.gallery {
+    background-color: var(--bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ==========================================================================
+   REVIEWS (With Trust Rating Summary)
+   ========================================================================== */
+.reviews {
+    background-color: var(--surface);
+}
+
+.reviews-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.reviews-rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.reviews-rating-summary .stars {
+    color: var(--accent);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    padding: 40px 32px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all var(--transition-fast);
+}
+
+.review-card:hover {
+    box-shadow: var(--shadow-card);
+    border-color: var(--primary);
+}
+
+.review-card .stars {
+    color: var(--accent);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.review-card .quote {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.review-card .author {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   BOOKING CTA (Ethereal Background)
+   ========================================================================== */
+.booking-cta {
+    padding: 88px 0;
+    background-color: var(--primary);
+    color: var(--surface);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.booking-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+}
+
+.booking-cta h2 {
+    font-size: 2.8rem;
+    color: var(--surface);
+    margin-bottom: 16px;
+}
+
+.booking-cta p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.booking-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* ==========================================================================
+   CONTACT CARD
+   ========================================================================== */
+.contact {
+    background-color: var(--bg);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+}
+
+.contact-info {
+    padding: 56px;
+}
+
+.contact-info h2 {
+    margin-bottom: 24px;
+}
+
+.contact-list {
+    margin-bottom: 32px;
+}
+
+.contact-list li {
+    font-size: 1rem;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-list i {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+
+.parking-info {
+    font-size: 0.9rem;
+    color: var(--muted);
+    background-color: var(--bg);
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent);
+}
+
+.contact-map {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================================
+   FOOTER (Dark Charcoal)
+   ========================================================================== */
+.footer {
+    background-color: #232523;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 0 32px;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.footer-brand .logo {
+    color: #fff;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition-fast);
+}
+
+.footer-col ul a:hover {
+    color: var(--accent);
+}
+
+.footer-contact p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition-fast);
+}
+
+.footer-contact a:hover {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    background: transparent;
+    transition: var(--transition-fast);
+}
+
+.social-links a:hover {
+    background: var(--surface);
+    color: #232523;
+    border-color: var(--surface);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.35);
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   MOBILE STICKY BAR
+   ========================================================================== */
+.mobile-sticky-bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--surface);
+        box-shadow: 0 -4px 20px rgba(43,38,32,0.05);
+        z-index: 998;
+        border-top: 1px solid var(--border);
+    }
+}
+
+.mobile-sticky-bar .sticky-btn {
+    flex: 1;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-sticky-bar .sticky-btn:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+.mobile-sticky-bar .sticky-btn i {
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.mobile-sticky-bar .btn-book-sticky {
+    background-color: var(--primary);
+    color: var(--surface);
+}
+
+.mobile-sticky-bar .btn-book-sticky i {
+    color: var(--surface);
+}
+
+/* ==========================================================================
+   MODAL WIZARD (Glassmorphism & Elegant Inputs)
+   ========================================================================== */
+.booking-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(43, 38, 32, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-fast);
+}
+
+.booking-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.booking-modal-card {
+    background: var(--surface);
+    width: 92%;
+    max-width: 580px;
+    border-radius: var(--radius-lg);
+    position: relative;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border);
+}
+
+.booking-modal-overlay.active .booking-modal-card {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: var(--surface-soft);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.close-modal:hover {
+    background: var(--primary);
+    color: var(--surface);
+}
+
+.modal-header {
+    padding: 32px 40px 24px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+}
+
+.booking-progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding: 0 16px;
+}
+
+.progress-step {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: var(--transition-fast);
+}
+
+.progress-step.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--surface);
+}
+
+.progress-step.completed {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--surface);
+}
+
+.progress-line {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+    margin: 0 12px;
+}
+
+.modal-body {
+    padding: 32px 40px;
+    overflow-y: auto;
+}
+
+.booking-step {
+    display: none;
+}
+
+.booking-step.active {
+    display: block;
+}
+
+.booking-step h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.service-selection-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-option {
+    cursor: pointer;
+}
+
+.service-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.service-option .option-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    transition: all var(--transition-fast);
+}
+
+.service-option input:checked + .option-content {
+    background: var(--surface-soft);
+    border-color: var(--primary);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--bg);
+    padding: 12px 16px;
+    font-weight: 300;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text);
+    transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+    outline: none;
+    background: var(--surface);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(140, 155, 143, 0.15);
+}
+
+.datetime-grid, .form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.booking-summary-box {
+    background-color: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-top: 24px;
+}
+
+.booking-summary-box h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.summary-row.total {
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+    margin-top: 8px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.step-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.step-actions .btn {
+    flex: 1;
+}
+
+.success-step {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.success-icon {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background-color: rgba(140, 155, 143, 0.1);
+    color: var(--primary);
+    font-size: 1.8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 1024px) {
+    section {
+        padding: 72px 0;
+    }
+    .hero-container {
+        gap: 40px;
+    }
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .featured-container, .about-container, .contact-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 56px 0;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .nav, .header-actions .btn-book {
+        display: none;
+    }
+    .mobile-menu {
+        display: flex;
+    }
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .hero-content {
+        align-items: center;
+    }
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-actions .btn {
+        width: 100%;
+    }
+    .hero-features {
+        justify-content: center;
+    }
+    .hero-visual {
+        order: -1;
+        width: 100%;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+    .hero-badge {
+        left: 0;
+        bottom: 10px;
+    }
+    .quick-info {
+        margin-top: 0;
+        padding: 40px 0;
+        background-color: var(--surface-soft);
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .promo-banner {
+        grid-template-columns: 1fr;
+        padding: 40px 24px;
+        text-align: center;
+        gap: 32px;
+    }
+    .promo-action {
+        justify-content: center;
+    }
+    .promo-action .btn {
+        width: 100%;
+    }
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info {
+        padding: 32px 20px;
+    }
+    .contact-map {
+        height: 300px;
+        min-height: auto;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+    }
+    .footer-contact p {
+        justify-content: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    body {
+        padding-bottom: 60px; /* Space for mobile sticky bar */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .datetime-grid, .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
 </head>
 <body>
 
@@ -32,7 +1761,7 @@
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <span class="logo-light">LUMINA</span><span class="logo-accent">SPA</span>
+                LUMINA<span>SPA</span>
             </a>
             
             <nav class="nav" id="main-nav">
@@ -40,13 +1769,13 @@
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#gallery" class="nav-link">Gallery</a>
-                <a href="#specials" class="nav-link">Specials</a>
+                <a href="#specials" class="nav-link">Offer</a>
                 <a href="#reviews" class="nav-link">Reviews</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
 
             <div class="header-actions">
-                <a href="#booking" class="btn btn-primary btn-book">Book Appointment</a>
+                <button class="btn btn-primary btn-book">Book Appointment</button>
                 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -63,7 +1792,7 @@
             <a href="#services" class="mobile-link">Services</a>
             <a href="#about" class="mobile-link">About</a>
             <a href="#gallery" class="mobile-link">Gallery</a>
-            <a href="#specials" class="mobile-link">Specials</a>
+            <a href="#specials" class="mobile-link">Offer</a>
             <a href="#reviews" class="mobile-link">Reviews</a>
             <a href="#contact" class="mobile-link">Contact</a>
             <a href="tel:+15551234567" class="mobile-phone"><i class="fa-solid fa-phone"></i> Call: (555) 123-4567</a>
@@ -76,24 +1805,31 @@
         <section class="hero" id="home">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <span class="hero-subtitle">RESULTS-DRIVEN SKINCARE & WELLNESS</span>
-                    <h1 class="hero-title">Get Flawless, Glowing Skin in 60 Minutes — <span class="text-serif-italic">Or It's Free</span></h1>
-                    <p class="hero-description">We help busy individuals erase deep stress, reverse aging, and restore a radiant complexion. Book your visit today and get a complimentary Deep-Hydration Therapy boost ($45 value) completely free. 100% Satisfaction Guarantee.</p>
+                    <span class="section-subtitle hero-subtitle">RESULTS-DRIVEN SKINCARE & WELLNESS</span>
+                    <h1 class="hero-title">Relax Deeply.<br>Glow Naturally.</h1>
+                    <p class="hero-description">Personalized facials, massage therapy, and body treatments designed to help you feel restored, confident, and beautifully refreshed.</p>
                     
                     <div class="hero-actions">
-                        <button class="btn btn-primary btn-book">Claim Your Risk-Free Glow Visit</button>
-                        <a href="#services" class="btn btn-outline">Explore Our Treatments</a>
+                        <button class="btn btn-primary btn-book">Book Appointment</button>
+                        <a href="#services" class="btn btn-secondary">View Services</a>
                     </div>
                     
                     <div class="hero-features">
-                        <span><i class="fa-solid fa-shield-halved"></i> 100% Money-Back Guarantee</span>
-                        <span><i class="fa-solid fa-bolt"></i> Visible Glow in 1 Visit</span>
-                        <span><i class="fa-solid fa-leaf"></i> Zero Down Time</span>
+                        <span><i class="fa-solid fa-circle-check"></i> Licensed Professionals</span>
+                        <span><i class="fa-solid fa-circle-check"></i> Clean, Relaxing Space</span>
+                        <span><i class="fa-solid fa-circle-check"></i> Same-week Appointments</span>
                     </div>
                 </div>
                 <div class="hero-visual">
                     <div class="hero-image-wrapper">
                         <img src="assets/spa-hero-bg.png" alt="Relaxing Spa Facial Treatment" class="hero-image">
+                    </div>
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-star"></i>
+                        <div class="hero-badge-text">
+                            <h4>4.9 Google Rating</h4>
+                            <p>320+ verified client reviews</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,8 +1862,8 @@
                 <div class="info-card highlight">
                     <div class="info-icon"><i class="fa-regular fa-calendar-check"></i></div>
                     <div class="info-details">
-                        <h3>Booking</h3>
-                        <p>Online Booking Available</p>
+                        <h3>Online Booking</h3>
+                        <p>Simple & instant scheduling</p>
                         <button class="btn-text btn-book">Book Now <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
@@ -138,9 +1874,9 @@
         <section class="services" id="services">
             <div class="container">
                 <div class="section-header text-center">
-                    <span class="section-subtitle">What We Offer</span>
+                    <span class="section-subtitle">Premium Treatments</span>
                     <h2 class="section-title">Our Spa Services</h2>
-                    <p class="section-description">Personalized spa treatments for your skin, body, and mind. From relaxing facials to soothing massage therapy, our services are designed to help you unwind and restore balance.</p>
+                    <p class="section-description">Thoughtfully curated therapies designed to address your skin care, body wellness, and relaxation needs with visible, lasting results.</p>
                 </div>
 
                 <div class="services-grid">
@@ -151,10 +1887,10 @@
                         </div>
                         <div class="service-content">
                             <h3>Facial Treatments</h3>
-                            <p>Deep cleansing, hydration, anti-aging, brightening, acne care, and customized facials tailored to your skin type.</p>
+                            <p>Deep cleansing, intense hydration, and advanced anti-aging therapies customized precisely to your skin's unique needs.</p>
                             <div class="service-footer">
-                                <span class="price">Starting at $75</span>
-                                <button class="btn btn-outline-small btn-book">Book</button>
+                                <span class="price">Starting at $95</span>
+                                <button class="btn btn-outline-small btn-book">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -166,10 +1902,10 @@
                         </div>
                         <div class="service-content">
                             <h3>Massage Therapy</h3>
-                            <p>Relaxing body massage, deep tissue, hot stone, aromatherapy, and stress-relief treatments.</p>
+                            <p>Relaxing Swedish massage, deep tissue, hot stone, and restorative aromatherapy tailored to relieve your physical stress.</p>
                             <div class="service-footer">
-                                <span class="price">Starting at $85</span>
-                                <button class="btn btn-outline-small btn-book">Book</button>
+                                <span class="price">Starting at $110</span>
+                                <button class="btn btn-outline-small btn-book">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -181,10 +1917,10 @@
                         </div>
                         <div class="service-content">
                             <h3>Body Treatments</h3>
-                            <p>Body scrub, body wrap, detox treatment, back facial, and skin smoothing services.</p>
+                            <p>Nourishing organic sugar scrubs, detoxifying clay body wraps, and skin smoothing services for full-body restoration.</p>
                             <div class="service-footer">
-                                <span class="price">Starting at $95</span>
-                                <button class="btn btn-outline-small btn-book">Book</button>
+                                <span class="price">Starting at $120</span>
+                                <button class="btn btn-outline-small btn-book">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -196,10 +1932,10 @@
                         </div>
                         <div class="service-content">
                             <h3>Waxing Services</h3>
-                            <p>Professional waxing for face, arms, legs, underarms, bikini, and full body in a comfortable environment.</p>
+                            <p>Expert and highly gentle professional face and body waxing treatments in a clean, strictly private environment.</p>
                             <div class="service-footer">
-                                <span class="price">Starting at $15</span>
-                                <button class="btn btn-outline-small btn-book">Book</button>
+                                <span class="price">Starting at $25</span>
+                                <button class="btn btn-outline-small btn-book">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -211,10 +1947,10 @@
                         </div>
                         <div class="service-content">
                             <h3>Lash & Brow</h3>
-                            <p>Lash lift, brow shaping, brow tinting, and professional beauty enhancement services.</p>
+                            <p>Elegantly crafted lash lifts, custom brow lamination, precision shaping, and styling to enhance your natural beauty features.</p>
                             <div class="service-footer">
-                                <span class="price">Starting at $35</span>
-                                <button class="btn btn-outline-small btn-book">Book</button>
+                                <span class="price">Starting at $45</span>
+                                <button class="btn btn-outline-small btn-book">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -226,9 +1962,9 @@
                         </div>
                         <div class="service-content">
                             <h3>Skin Care Packages</h3>
-                            <p>Personalized comprehensive treatment plans for glowing, healthy, and refreshed skin all year round.</p>
+                            <p>Comprehensive multiple-session treatment plans strategically designed to maintain healthy, glowing skin year-round.</p>
                             <div class="service-footer">
-                                <span class="price">Custom pricing</span>
+                                <span class="price">Custom Pricing</span>
                                 <button class="btn btn-outline-small btn-book">Inquire</button>
                             </div>
                         </div>
@@ -245,22 +1981,27 @@
         <section class="featured-treatment">
             <div class="container featured-container">
                 <div class="featured-visual">
-                    <img src="assets/featured-glow.jpg" alt="Signature Glow Facial">
+                    <img src="assets/featured-glow.jpg" alt="Signature Glow Facial at Lumina Spa">
                 </div>
                 <div class="featured-content">
-                    <span class="section-subtitle">Featured Service</span>
+                    <span class="featured-badge">Most Requested Treatment</span>
                     <h2 class="section-title">Signature Glow Facial</h2>
-                    <p class="section-description">A relaxing facial treatment designed to deeply cleanse, hydrate, and refresh your skin for a healthy, natural glow. Perfect for all skin types and customized to your specific needs.</p>
+                    <p class="section-description" style="margin-bottom: 20px;">A relaxing and highly therapeutic facial treatment designed to deeply cleanse, deeply exfoliate, and deeply hydrate your skin, restoring a natural, radiant glow.</p>
                     
+                    <div class="treatment-meta">
+                        <span><i class="fa-regular fa-clock"></i> 60 Minutes</span>
+                        <span><i class="fa-solid fa-tag"></i> Starting at $120</span>
+                    </div>
+
                     <ul class="treatment-list">
-                        <li><i class="fa-solid fa-check"></i> Deep cleansing & steaming</li>
-                        <li><i class="fa-solid fa-check"></i> Gentle exfoliation & extractions</li>
-                        <li><i class="fa-solid fa-check"></i> Custom hydrating mask</li>
-                        <li><i class="fa-solid fa-check"></i> Relaxing facial & décolleté massage</li>
-                        <li><i class="fa-solid fa-check"></i> Luminous skin glow finish</li>
+                        <li><i class="fa-solid fa-check"></i> Deep Cleansing & Clarifying Steam</li>
+                        <li><i class="fa-solid fa-check"></i> Gentle Exfoliation & Expert Extractions</li>
+                        <li><i class="fa-solid fa-check"></i> Customized Nutrient-Rich Hydrating Mask</li>
+                        <li><i class="fa-solid fa-check"></i> Relaxing Face, Neck & Shoulder Massage</li>
+                        <li><i class="fa-solid fa-check"></i> Luminous Lip & Eye Nourishing Finish</li>
                     </ul>
                     
-                    <button class="btn btn-secondary btn-book">Book This Treatment</button>
+                    <button class="btn btn-accent btn-book">Book Signature Facial</button>
                 </div>
             </div>
         </section>
@@ -270,12 +2011,12 @@
             <div class="container">
                 <div class="promo-banner">
                     <div class="promo-text">
-                        <span class="promo-badge">Limited Time Grand Slam Offer</span>
-                        <h2>The Lumina "All-Inclusive" Glow Experience</h2>
-                        <p>Get our signature 60-Minute Glow Facial, a Deep-Hydration Botanical Boost, and a Premium take-home organic serum kit. A total value of <strong>$185</strong> — yours today for just <strong>$75</strong>. 100% risk-free: love your glowing skin or pay absolutely nothing. <em>(Only 8 slots left this week to protect our service quality).</em></p>
+                        <span class="promo-badge">New Client Glow Offer</span>
+                        <h2>Complimentary Skincare Boost</h2>
+                        <p>Enjoy a customized Signature Glow Facial with a complimentary hydration boost on your first visit. Discover your skin's true natural radiance in a single relaxing session.</p>
                     </div>
                     <div class="promo-action">
-                        <button class="btn btn-white btn-book">Lock In My $75 Glow Offer</button>
+                        <button class="btn btn-primary btn-book">Claim New Client Offer</button>
                     </div>
                 </div>
             </div>
@@ -285,29 +2026,30 @@
         <section class="why-us">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Why Clients Choose Lumina</h2>
+                    <span class="section-subtitle">The Lumina Difference</span>
+                    <h2 class="section-title">Why Clients Choose Us</h2>
                 </div>
                 
                 <div class="why-grid">
                     <div class="why-card">
-                        <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
-                        <h3>Licensed Professionals</h3>
-                        <p>Our team provides professional spa services with care, expertise, and attention to detail.</p>
+                        <div class="icon"><i class="fa-solid fa-shield-check"></i></div>
+                        <h3>Licensed Care</h3>
+                        <p>Our dedicated, certified estheticians and therapists hold years of experienced aesthetic training.</p>
                     </div>
                     <div class="why-card">
-                        <div class="icon"><i class="fa-solid fa-spa"></i></div>
-                        <h3>Clean & Relaxing</h3>
-                        <p>Enjoy a peaceful, comfortable, and rigorously clean space from the moment you arrive.</p>
+                        <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+                        <h3>Personalized Treatments</h3>
+                        <p>Every therapy session is custom-tailored precisely to your unique skin type and personal wellness goals.</p>
                     </div>
                     <div class="why-card">
-                        <div class="icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
-                        <h3>Personalized Care</h3>
-                        <p>Each service is thoughtfully designed around your unique skin, body, and wellness needs.</p>
+                        <div class="icon"><i class="fa-solid fa-feather-pointed"></i></div>
+                        <h3>Peaceful Environment</h3>
+                        <p>A quiet, strictly clean, and elegant sanctuary designed for complete mental and body relaxation.</p>
                     </div>
                     <div class="why-card">
-                        <div class="icon"><i class="fa-regular fa-star"></i></div>
-                        <h3>Visible Results</h3>
-                        <p>We focus on high-quality treatments that help you feel refreshed, confident, and renewed.</p>
+                        <div class="icon"><i class="fa-solid fa-sparkles"></i></div>
+                        <h3>Results You Can Feel</h3>
+                        <p>We combine advanced, premium skincare products with proven therapies for visible, lasting outcomes.</p>
                     </div>
                 </div>
             </div>
@@ -317,15 +2059,16 @@
         <section class="about" id="about">
             <div class="container about-container">
                 <div class="about-content">
-                    <span class="section-subtitle">Our Story</span>
+                    <span class="section-subtitle">Our Philosophy</span>
                     <h2 class="section-title">Welcome to Lumina Spa</h2>
-                    <p>At Lumina Spa & Wellness, we believe self-care should feel relaxing, personal, and results-driven. Our spa offers professional facials, massage therapy, body treatments, waxing, and beauty services in a calm and welcoming environment.</p>
-                    <p>Whether you are here to refresh your skin, relieve stress, or enjoy a peaceful moment for yourself, our dedicated team is here to help you look and feel your absolute best.</p>
+                    <p>At Lumina Spa & Wellness, we believe self-care should be personal, restorative, and results-driven. We provide a peaceful escape from the fast pace of daily life, offering professional facials, massage therapy, body wraps, and custom grooming services.</p>
+                    <p>Whether you're visiting to address specific skincare concerns, relieve tight muscles, or simply enjoy a quiet self-care morning, our team is completely committed to restoring your glowing health and confidence.</p>
                     
-                    <button class="btn btn-outline btn-book">Book Your Visit</button>
+                    <button class="btn btn-secondary btn-book" style="margin-top: 12px;">Book Your Visit</button>
                 </div>
                 <div class="about-visual">
-                    <img src="assets/spa-interior.png" alt="Lumina Spa Interior" class="main-img">
+                    <img src="assets/spa-interior.png" alt="Beautiful Lumina Spa Interior Lobby" class="main-img">
+                    <div class="about-badge">Est. 2018</div>
                 </div>
             </div>
         </section>
@@ -333,26 +2076,24 @@
         <!-- Treatment Process -->
         <section class="process">
             <div class="container text-center">
-                <span class="section-subtitle">What to Expect</span>
-                <h2 class="section-title">Your Spa Experience</h2>
+                <span class="section-subtitle">Your Experience</span>
+                <h2 class="section-title">Our Simple Process</h2>
                 
                 <div class="process-steps">
                     <div class="step">
-                        <div class="step-number">1</div>
+                        <div class="step-number">01</div>
                         <h3>Consultation</h3>
-                        <p>We listen to your needs, assess your skin, and recommend the right customized treatment for you.</p>
+                        <p>We listen closely to your skincare and wellness goals to formulate a tailored treatment recommendation.</p>
                     </div>
-                    <div class="step-line"></div>
                     <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Relaxing Treatment</h3>
-                        <p>Enjoy a peaceful and transformative service in our clean, comfortable, and tranquil spa environment.</p>
+                        <div class="step-number">02</div>
+                        <h3>Customized Treatment</h3>
+                        <p>Unwind in our soothing, immaculate rooms as our specialists perform your therapeutic skincare or body treatment.</p>
                     </div>
-                    <div class="step-line"></div>
                     <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Feel Refreshed</h3>
-                        <p>Leave feeling completely relaxed, confident, and beautifully renewed from the inside out.</p>
+                        <div class="step-number">03</div>
+                        <h3>Leave Refreshed</h3>
+                        <p>Emerge completely relaxed, deeply refreshed, and glowing with new confidence and physical energy.</p>
                     </div>
                 </div>
             </div>
@@ -362,21 +2103,18 @@
         <section class="gallery" id="gallery">
             <div class="container">
                 <div class="section-header text-center">
-                    <h2 class="section-title">Inside Our Spa</h2>
-                    <p class="section-description">Take a glimpse into our calming spaces and premium wellness treatments.</p>
+                    <span class="section-subtitle">Inside Our Space</span>
+                    <h2 class="section-title">Our Sanctuary</h2>
+                    <p class="section-description">Take a brief visual tour of our quiet relaxation rooms and premium skincare products.</p>
                 </div>
                 
                 <div class="gallery-grid">
-                    <img src="assets/gallery-1.jpg" alt="Spa Treatment Room" class="gallery-img">
-                    <img src="assets/gallery-2.jpg" alt="Skincare Products" class="gallery-img">
-                    <img src="assets/gallery-3.jpg" alt="Relaxing Facial" class="gallery-img">
-                    <img src="assets/gallery-4.png" alt="Hot Stone Massage" class="gallery-img">
-                    <img src="assets/gallery-5.png" alt="Spa Towels and Decor" class="gallery-img">
-                    <img src="assets/gallery-6.jpg" alt="Aromatherapy" class="gallery-img">
-                </div>
-                
-                <div class="text-center" style="margin-top: 40px;">
-                    <a href="#" class="btn btn-outline"><i class="fa-brands fa-instagram"></i> Follow Us on Instagram</a>
+                    <img src="assets/gallery-1.jpg" alt="Calming Spa Skincare Room" class="gallery-img">
+                    <img src="assets/gallery-2.jpg" alt="Premium Clinical Skincare Products" class="gallery-img">
+                    <img src="assets/gallery-3.jpg" alt="Esthetician Performing Glowing Facial" class="gallery-img">
+                    <img src="assets/gallery-4.png" alt="Soothing Hot Stone Back Massage" class="gallery-img">
+                    <img src="assets/gallery-5.png" alt="Clean Organic Spa Towels and Aromatherapy Oils" class="gallery-img">
+                    <img src="assets/gallery-6.jpg" alt="Essential Oils and Restorative Decor" class="gallery-img">
                 </div>
             </div>
         </section>
@@ -384,31 +2122,41 @@
         <!-- Reviews -->
         <section class="reviews" id="reviews">
             <div class="container">
-                <div class="section-header text-center">
-                    <span class="section-subtitle">Testimonials</span>
-                    <h2 class="section-title">What Our Clients Say</h2>
+                <div class="reviews-header text-center">
+                    <span class="section-subtitle">Client Stories</span>
+                    <h2 class="section-title">Loved by Local Clients</h2>
+                    <div class="reviews-rating-summary">
+                        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        <strong>4.9/5 Stars</strong> based on 320+ Google Reviews
+                    </div>
                 </div>
                 
                 <div class="reviews-grid">
                     <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="quote">"Such a relaxing experience. The facial was amazing and my skin felt so refreshed afterward. Highly recommend Lumina!"</p>
-                        <span class="author">- Emily R.</span>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"An incredibly professional and relaxing experience. The facial was highly personalized, and my skin had a visible, lasting glow for days after."</p>
+                        </div>
+                        <span class="author">— Emily R., Los Angeles</span>
                     </div>
                     <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="quote">"The deep tissue massage completely relieved my back pain. The atmosphere is so peaceful and clean."</p>
-                        <span class="author">- Sarah T.</span>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"The deep tissue massage was perfect. The therapist knew exactly how to target tension spots. The entire spa is immaculate and quiet."</p>
+                        </div>
+                        <span class="author">— Marcus K., Pasadena</span>
                     </div>
                     <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="quote">"I love their signature glow facial. The esthetician was so gentle and professional. I will definitely be coming back."</p>
-                        <span class="author">- Jessica M.</span>
+                        <div>
+                            <div class="stars">★★★★★</div>
+                            <p class="quote">"Their signature glow facial has completely transformed my dry skin. The team is warm, knowledgeable, and never pushy."</p>
+                        </div>
+                        <span class="author">— Jessica M., Santa Monica</span>
                     </div>
                 </div>
                 
-                <div class="text-center" style="margin-top: 40px;">
-                    <button class="btn btn-outline">Read More Reviews on Google</button>
+                <div class="text-center" style="margin-top: 16px;">
+                    <button class="btn btn-outline-small btn-book">Book Your Visit</button>
                 </div>
             </div>
         </section>
@@ -417,9 +2165,9 @@
         <section class="booking-cta">
             <div class="container text-center">
                 <h2>Ready to Relax and Glow?</h2>
-                <p>Book your facial, massage, waxing, or spa treatment today and enjoy a peaceful self-care experience.</p>
+                <p>Schedule your custom facial, restorative massage, or premium body treatment in our peaceful wellness oasis today.</p>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary btn-book">Book Appointment</button>
+                    <button class="btn btn-primary btn-book" style="background-color: var(--surface); color: var(--primary-dark);">Book Appointment</button>
                     <a href="tel:+15551234567" class="btn btn-outline-white">Call Now</a>
                 </div>
             </div>
@@ -429,17 +2177,17 @@
         <section class="contact" id="contact">
             <div class="container contact-container">
                 <div class="contact-info">
-                    <h2 class="section-title">Visit Lumina Spa</h2>
+                    <span class="section-subtitle">Find Us</span>
+                    <h2 class="section-title">Visit Our Spa</h2>
                     <ul class="contact-list">
-                        <li><i class="fa-solid fa-location-dot"></i> <strong>Address:</strong> 123 Wellness Ave, Los Angeles, CA 90014</li>
-                        <li><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> (555) 123-4567</li>
-                        <li><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> info@luminaspa.com</li>
-                        <li><i class="fa-regular fa-clock"></i> <strong>Hours:</strong> Mon-Sat: 10am - 7pm | Sun: By Appointment</li>
+                        <li><i class="fa-solid fa-location-dot"></i> <span><strong>Address:</strong> 123 Wellness Ave, Los Angeles, CA 90014</span></li>
+                        <li><i class="fa-solid fa-phone"></i> <span><strong>Phone:</strong> (555) 123-4567</span></li>
+                        <li><i class="fa-solid fa-envelope"></i> <span><strong>Email:</strong> Hello@luminaspa.com</span></li>
+                        <li><i class="fa-regular fa-clock"></i> <span><strong>Hours:</strong> Mon-Sat: 10:00am - 7:00pm | Sun: By Appointment</span></li>
                     </ul>
-                    <p class="parking-info"><i class="fa-solid fa-square-parking"></i> Free parking available at the rear entrance. Walk-ins welcome based on availability.</p>
+                    <p class="parking-info"><i class="fa-solid fa-square-parking"></i> Free parking is available in the private rear lot. Walk-ins welcome based on therapist availability.</p>
                 </div>
                 <div class="contact-map">
-                    <!-- Google Map Placeholder -->
                     <div class="map-placeholder">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6980385906233!2d-118.25700412353153!3d34.05156711776949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b5b5c96767%3A0x7d0dbcd0227cd90b!2sDowntown%20Los%20Angeles%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -452,10 +2200,10 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-col footer-brand">
-                <a href="#" class="logo">
-                    <span class="logo-light" style="color: #fff;">LUMINA</span><span class="logo-accent" style="color: var(--secondary); font-style: italic;">SPA</span>
+                <a href="#" class="logo" style="color: var(--surface);">
+                    LUMINA<span>SPA</span>
                 </a>
-                <p style="margin-top: 15px;">Erase deep stress, restore flawless skin, and unlock ultimate confidence with our results-driven treatments in Los Angeles.</p>
+                <p style="margin-top: 15px;">Personalized facials, relaxing massage therapy, and nourishing body treatments designed to restore your natural health and glow.</p>
                 <div class="social-links">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -466,9 +2214,9 @@
             <div class="footer-col">
                 <h4>Our Services</h4>
                 <ul>
-                    <li><a href="#services">Signature Glow Facials</a></li>
-                    <li><a href="#services">Deep Tissue Massage</a></li>
-                    <li><a href="#services">Hydrating Body Wraps</a></li>
+                    <li><a href="#services">Facial Treatments</a></li>
+                    <li><a href="#services">Massage Therapy</a></li>
+                    <li><a href="#services">Body Treatments</a></li>
                     <li><a href="#services">Lash & Brow Styling</a></li>
                     <li><a href="#services">Luxury Waxing</a></li>
                 </ul>
@@ -478,19 +2226,19 @@
                 <h4>Client Experience</h4>
                 <ul>
                     <li><a href="#booking" class="btn-book">Book Risk-Free Visit</a></li>
-                    <li><a href="#specials">Grand Slam Specials</a></li>
+                    <li><a href="#specials">New Client Offer</a></li>
                     <li><a href="#about">Our Wellness Philosophy</a></li>
-                    <li><a href="#reviews">Client Success Stories</a></li>
+                    <li><a href="#reviews">Client Testimonials</a></li>
                     <li><a href="#gallery">Inside Lumina Spa</a></li>
                 </ul>
             </div>
             
             <div class="footer-col footer-contact">
                 <h4>Connect With Us</h4>
-                <p><i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 10px;"></i> 123 Wellness Ave, LA, CA</p>
-                <p style="margin-top: 8px;"><i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 10px;"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
-                <p style="margin-top: 8px;"><i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> <a href="mailto:hello@luminaspa.com">hello@luminaspa.com</a></p>
-                <p style="margin-top: 8px; font-size: 0.85rem; color: rgba(255,255,255,0.5);"><i class="fa-regular fa-clock" style="color: var(--secondary); margin-right: 10px;"></i> Mon-Sat: 10am - 7pm</p>
+                <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> 123 Wellness Ave, LA, CA</p>
+                <p style="margin-top: 8px;"><i class="fa-solid fa-phone" style="color: var(--accent);"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                <p style="margin-top: 8px;"><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> <a href="mailto:hello@luminaspa.com">hello@luminaspa.com</a></p>
+                <p style="margin-top: 8px; font-size: 0.85rem; color: rgba(255,255,255,0.4);"><i class="fa-regular fa-clock" style="color: var(--accent);"></i> Mon-Sat: 10:00am - 7:00pm</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -502,9 +2250,8 @@
 
     <!-- Mobile Sticky Bar -->
     <div class="mobile-sticky-bar">
-        <button class="sticky-btn btn-book">Book Now</button>
+        <button class="sticky-btn btn-book-sticky btn-book"><i class="fa-regular fa-calendar-check"></i> Book Now</button>
         <a href="tel:+15551234567" class="sticky-btn"><i class="fa-solid fa-phone"></i> Call</a>
-        <a href="#contact" class="sticky-btn"><i class="fa-solid fa-location-dot"></i> Directions</a>
     </div>
 
     <!-- Booking Modal -->
@@ -537,24 +2284,24 @@
                             </span>
                         </label>
                         <label class="service-option">
-                            <input type="radio" name="service" value="Deep Tissue Massage" data-price="$95">
+                            <input type="radio" name="service" value="Deep Tissue Massage" data-price="$110">
                             <span class="option-content">
                                 <span class="option-title">Deep Tissue Massage</span>
-                                <span class="option-price">$95 | 60 Min</span>
+                                <span class="option-price">$110 | 60 Min</span>
                             </span>
                         </label>
                         <label class="service-option">
-                            <input type="radio" name="service" value="Hot Stone Massage" data-price="$110">
+                            <input type="radio" name="service" value="Hot Stone Massage" data-price="$120">
                             <span class="option-content">
                                 <span class="option-title">Hot Stone Massage</span>
-                                <span class="option-price">$110 | 75 Min</span>
+                                <span class="option-price">$120 | 75 Min</span>
                             </span>
                         </label>
                         <label class="service-option">
-                            <input type="radio" name="service" value="Hydrating Body Wrap" data-price="$105">
+                            <input type="radio" name="service" value="Hydrating Body Wrap" data-price="$120">
                             <span class="option-content">
                                 <span class="option-title">Hydrating Body Wrap</span>
-                                <span class="option-price">$105 | 60 Min</span>
+                                <span class="option-price">$120 | 60 Min</span>
                             </span>
                         </label>
                     </div>
@@ -582,7 +2329,7 @@
                         </div>
                     </div>
                     <div class="step-actions">
-                        <button class="btn btn-outline prev-step">Back</button>
+                        <button class="btn btn-secondary prev-step">Back</button>
                         <button class="btn btn-primary next-step">Continue to Details</button>
                     </div>
                 </div>
@@ -617,7 +2364,7 @@
                     </div>
 
                     <div class="step-actions">
-                        <button class="btn btn-outline prev-step">Back</button>
+                        <button class="btn btn-secondary prev-step">Back</button>
                         <button class="btn btn-primary submit-booking">Confirm Booking</button>
                     </div>
                 </div>
@@ -633,6 +2380,238 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-phone, .mobile-nav .btn-book');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            // Toggle hamburger icon animation
+            const bars = menuToggle.querySelectorAll('.bar');
+            if (mobileMenu.classList.contains('open')) {
+                bars[0].style.transform = 'translateY(6.5px) rotate(45deg)';
+                bars[1].style.opacity = '0';
+                bars[2].style.transform = 'translateY(-6.5px) rotate(-45deg)';
+            } else {
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            }
+        });
+
+        // Close menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                const bars = menuToggle.querySelectorAll('.bar');
+                bars[0].style.transform = 'none';
+                bars[1].style.opacity = '1';
+                bars[2].style.transform = 'none';
+            });
+        });
+    }
+
+    // Booking Modal Wizard Logic
+    const modalOverlay = document.getElementById('booking-modal');
+    const bookButtons = document.querySelectorAll('.btn-book');
+    const closeButtons = document.querySelectorAll('.close-modal, .close-modal-btn');
+    
+    // Steps
+    let currentStep = 1;
+    const totalSteps = 4;
+    
+    // Elements
+    const progressSteps = document.querySelectorAll('.progress-step');
+    const progressLines = document.querySelectorAll('.progress-line');
+    const bookingSteps = document.querySelectorAll('.booking-step');
+    const nextBtns = document.querySelectorAll('.next-step');
+    const prevBtns = document.querySelectorAll('.prev-step');
+    const submitBtn = document.querySelector('.submit-booking');
+
+    // Open Modal
+    if (modalOverlay) {
+        bookButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modalOverlay.classList.add('active');
+                resetWizard();
+            });
+        });
+
+        // Close Modal
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalOverlay.classList.remove('active');
+            });
+        });
+
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+            }
+        });
+    }
+
+    // Next Step Logic
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (validateStep(currentStep)) {
+                if (currentStep === 2) updateSummary();
+                currentStep++;
+                updateWizardView();
+            } else {
+                alert('Please fill out all required fields.');
+            }
+        });
+    });
+
+    // Prev Step Logic
+    prevBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            currentStep--;
+            updateWizardView();
+        });
+    });
+
+    // Submit Logic
+    if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+            if (validateStep(currentStep)) {
+                currentStep++;
+                updateWizardView();
+            } else {
+                alert('Please fill out your details.');
+            }
+        });
+    }
+
+    // Wizard Functions
+    function updateWizardView() {
+        // Update Content
+        bookingSteps.forEach((step, index) => {
+            if (index + 1 === currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+
+        // Update Progress Bar
+        if (currentStep <= 3) {
+            document.querySelector('.booking-progress').style.display = 'flex';
+            progressSteps.forEach((step, index) => {
+                if (index + 1 < currentStep) {
+                    step.classList.add('completed');
+                    step.classList.remove('active');
+                } else if (index + 1 === currentStep) {
+                    step.classList.add('active');
+                    step.classList.remove('completed');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            });
+            progressLines.forEach((line, index) => {
+                if (index + 1 < currentStep) {
+                    line.classList.add('completed');
+                } else {
+                    line.classList.remove('completed');
+                }
+            });
+        } else {
+            // Hide progress on success step
+            document.querySelector('.booking-progress').style.display = 'none';
+        }
+    }
+
+    function validateStep(stepIndex) {
+        if (stepIndex === 1) return true; // Radio button always has a value
+        if (stepIndex === 2) {
+            const date = document.getElementById('booking-date').value;
+            const time = document.getElementById('booking-time').value;
+            return date !== '' && time !== '';
+        }
+        if (stepIndex === 3) {
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            return fname !== '' && lname !== '' && phone !== '' && email !== '';
+        }
+        return true;
+    }
+
+    function updateSummary() {
+        const serviceRadios = document.getElementsByName('service');
+        let selectedService = '';
+        let selectedPrice = '';
+        
+        for (let radio of serviceRadios) {
+            if (radio.checked) {
+                selectedService = radio.value;
+                selectedPrice = radio.getAttribute('data-price');
+                break;
+            }
+        }
+
+        const date = document.getElementById('booking-date').value;
+        const time = document.getElementById('booking-time').value;
+
+        // Format Date nicely
+        let formattedDate = date;
+        if (date) {
+            const dateObj = new Date(date);
+            formattedDate = dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        }
+
+        document.getElementById('summary-service').innerText = selectedService;
+        document.getElementById('summary-datetime').innerText = `${formattedDate} at ${time}`;
+        document.getElementById('summary-price').innerText = selectedPrice;
+    }
+
+    function resetWizard() {
+        currentStep = 1;
+        document.getElementById('booking-date').value = '';
+        document.getElementById('booking-time').value = '';
+        document.getElementById('fname').value = '';
+        document.getElementById('lname').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('email').value = '';
+        document.querySelector('.booking-progress').style.display = 'flex';
+        updateWizardView();
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 66, // Adjust for scrolled sticky header
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+    </script>
 </body>
 </html>
