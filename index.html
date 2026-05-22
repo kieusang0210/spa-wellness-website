@@ -1164,74 +1164,6 @@ section {
     gap: 16px;
 }
 
-/* ==========================================================================
-   CONTACT CARD
-   ========================================================================== */
-.contact {
-    background-color: var(--bg);
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    background: var(--surface);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-soft);
-    border: 1px solid var(--border);
-}
-
-.contact-info {
-    padding: 56px;
-}
-
-.contact-info h2 {
-    margin-bottom: 24px;
-}
-
-.contact-list {
-    margin-bottom: 32px;
-}
-
-.contact-list li {
-    font-size: 1rem;
-    margin-bottom: 18px;
-    display: grid;
-    grid-template-columns: 24px 1fr;
-    gap: 12px;
-    align-items: start;
-}
-
-.contact-list span {
-    min-width: 0;
-}
-
-.contact-list i {
-    color: var(--accent);
-    font-size: 1.1rem;
-    margin-top: 4px;
-}
-
-.parking-info {
-    font-size: 0.9rem;
-    color: var(--muted);
-    background-color: var(--bg);
-    padding: 14px 20px;
-    border-radius: var(--radius-md);
-    border-left: 3px solid var(--accent);
-}
-
-.contact-map {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-}
-
-.map-placeholder {
-    width: 100%;
-    height: 100%;
-}
 
 /* ==========================================================================
    FOOTER (Dark Charcoal)
@@ -1677,7 +1609,7 @@ section {
     .reviews-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .featured-container, .about-container, .contact-container {
+    .featured-container, .about-container {
         grid-template-columns: 1fr;
         gap: 48px;
     }
@@ -1757,13 +1689,7 @@ section {
     .reviews-grid {
         grid-template-columns: 1fr;
     }
-    .contact-info {
-        padding: 32px 20px;
-    }
-    .contact-map {
-        height: 300px;
-        min-height: auto;
-    }
+
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2233,31 +2159,10 @@ section {
             </div>
         </section>
 
-        <!-- Location / Contact -->
-        <section class="contact" id="contact">
-            <div class="container contact-container">
-                <div class="contact-info">
-                    <span class="section-subtitle">Find Us</span>
-                    <h2 class="section-title">Visit Our Spa</h2>
-                    <ul class="contact-list">
-                        <li><i class="fa-solid fa-location-dot"></i> <span><strong>Address:</strong> 123 Wellness Ave, Los Angeles, CA 90014</span></li>
-                        <li><i class="fa-solid fa-phone"></i> <span><strong>Phone:</strong> (555) 123-4567</span></li>
-                        <li><i class="fa-solid fa-envelope"></i> <span><strong>Email:</strong> Hello@luminaspa.com</span></li>
-                        <li><i class="fa-regular fa-clock"></i> <span><strong>Hours:</strong> <span class="hours-line">Mon – Sat: 10:00 AM – 7:00 PM</span><span style="display: block; margin-top: 4px;">Sun: By Appointment</span></span></li>
-                    </ul>
-                    <p class="parking-info"><i class="fa-solid fa-square-parking"></i> Free parking is available in the private rear lot. Walk-ins welcome based on therapist availability.</p>
-                </div>
-                <div class="contact-map">
-                    <div class="map-placeholder">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6980385906233!2d-118.25700412353153!3d34.05156711776949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b5b5c96767%3A0x7d0dbcd0227cd90b!2sDowntown%20Los%20Angeles%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container footer-container">
             <div class="footer-col footer-brand">
                 <a href="#" class="logo" style="color: var(--surface);">
@@ -2295,9 +2200,13 @@ section {
             
             <div class="footer-col footer-contact">
                 <h4>Visit Us</h4>
-                <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> Los Angeles, CA</p>
-                <p style="margin-top: 8px;"><i class="fa-solid fa-phone" style="color: var(--accent);"></i> <a href="tel:+15551234567">Call: (555) 123-4567</a></p>
-                <p style="margin-top: 8px;"><i class="fa-regular fa-calendar-check" style="color: var(--accent);"></i> Book online anytime</p>
+                <p><i class="fa-solid fa-location-dot" style="color: var(--accent);"></i> 123 Wellness Ave, Los Angeles, CA 90014</p>
+                <p style="margin-top: 8px;"><i class="fa-solid fa-phone" style="color: var(--accent);"></i> <a href="tel:+15551234567">(555) 123-4567</a></p>
+                <p style="margin-top: 8px;"><i class="fa-regular fa-clock" style="color: var(--accent);"></i> Mon – Sat: 10:00 AM – 7:00 PM</p>
+                <p style="margin-top: 8px; font-size: 0.8rem; color: rgba(255,255,255,0.45);"><i class="fa-solid fa-square-parking" style="color: var(--accent);"></i> Free parking in private rear lot</p>
+                <div class="footer-map" style="margin-top: 16px; border-radius: var(--radius-md); overflow: hidden; height: 160px; border: 1px solid rgba(255,255,255,0.1);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6980385906233!2d-118.25700412353153!3d34.05156711776949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7b5b5c96767%3A0x7d0dbcd0227cd90b!2sDowntown%20Los%20Angeles%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
