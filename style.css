@@ -16,8 +16,8 @@
     --border: #e8e4dc;
     
     /* Elegant Typography */
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Lato', sans-serif;
+    --font-heading: 'Be Vietnam Pro', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
     
     /* Spacing & Layout */
     --container-width: 1240px;
@@ -66,7 +66,33 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 400; /* Lighter weight for elegance */
     color: var(--text-main);
+}
+
+h1 {
+    font-size: clamp(44px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 20px;
     line-height: 1.2;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.small-text {
+    font-size: 13px;
+    line-height: 1.6;
 }
 
 .text-serif-italic {
@@ -87,13 +113,24 @@ ul {
 }
 
 .container {
-    max-width: var(--container-width);
+    width: min(1180px, calc(100% - 40px));
     margin: 0 auto;
-    padding: 0 40px;
 }
 
 .text-center {
     text-align: center;
+}
+
+section {
+    padding: 72px 0;
+}
+
+.section-sm {
+    padding: 48px 0;
+}
+
+.section-lg {
+    padding: 96px 0;
 }
 
 .section-subtitle {
@@ -369,9 +406,10 @@ ul {
     transform: translateY(-100%);
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 999;
-    display: flex;
+    display: none; /* Hide by default on desktop to prevent the overflow rendering bug */
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 
 .mobile-menu.open {
@@ -403,8 +441,11 @@ ul {
    HERO SECTION (Ethereal & Spacious)
    ========================================================================== */
 .hero {
-    padding-top: calc(var(--header-height) + 100px);
-    padding-bottom: 120px;
+    min-height: calc(100vh - 80px);
+    display: grid;
+    align-items: center;
+    padding: 64px 0;
+    padding-top: calc(var(--header-height) + 32px);
     background-color: var(--bg-main);
     position: relative;
     overflow: hidden;
@@ -423,8 +464,8 @@ ul {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 80px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -439,17 +480,19 @@ ul {
 }
 
 .hero-title {
-    font-size: 4.8rem;
-    margin-bottom: 30px;
-    line-height: 1.1;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
 }
 
 .hero-description {
-    font-size: 1.15rem;
+    max-width: 520px;
+    font-size: 17px;
+    line-height: 1.7;
     color: var(--text-muted);
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     font-weight: 300;
-    max-width: 90%;
 }
 
 .hero-actions {
@@ -587,14 +630,14 @@ ul {
    SERVICES (Arch Cards)
    ========================================================================== */
 .services {
-    padding: 150px 0;
+    padding: 72px 0;
     background-color: var(--bg-main);
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 36px 28px;
     margin-bottom: 60px;
 }
 
@@ -603,6 +646,7 @@ ul {
     transition: var(--transition-slow);
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .service-card:hover {
@@ -610,10 +654,12 @@ ul {
 }
 
 .service-image {
-    height: 320px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     overflow: hidden;
-    border-radius: var(--radius-arch);
-    margin-bottom: 25px;
+    border-radius: 999px 999px 24px 24px;
+    margin-bottom: 18px;
     box-shadow: var(--shadow-soft);
     position: relative;
 }
@@ -623,7 +669,7 @@ ul {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.1) 100%);
-    border-radius: var(--radius-arch);
+    border-radius: 999px 999px 24px 24px;
     pointer-events: none;
 }
 
@@ -643,20 +689,22 @@ ul {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 }
 
 .service-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 20px;
 }
 
 .service-content p {
+    max-width: 280px;
+    margin: 0 auto 14px;
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin-bottom: 25px;
-    flex-grow: 1;
     line-height: 1.6;
+    flex-grow: 1;
 }
 
 .service-footer {
@@ -677,7 +725,7 @@ ul {
    FEATURED TREATMENT (Soft Asymmetry)
    ========================================================================== */
 .featured-treatment {
-    padding: 120px 0;
+    padding: 72px 0;
     background-color: var(--bg-light);
     position: relative;
 }
@@ -685,7 +733,7 @@ ul {
 .featured-container {
     display: grid;
     grid-template-columns: 5fr 6fr;
-    gap: 80px;
+    gap: 48px;
     align-items: center;
 }
 
@@ -741,7 +789,7 @@ ul {
    PROMOTION (Minimalist Banner)
    ========================================================================== */
 .specials {
-    padding: 100px 0;
+    padding: 72px 0;
     background-color: var(--bg-main);
 }
 
@@ -785,7 +833,7 @@ ul {
    WHY US & PROCESS (Clean Icons)
    ========================================================================== */
 .why-us, .process {
-    padding: 120px 0;
+    padding: 72px 0;
     background-color: var(--bg-white);
 }
 
@@ -870,14 +918,14 @@ ul {
    ABOUT (Overlapping Layout)
    ========================================================================== */
 .about {
-    padding: 150px 0;
+    padding: 72px 0;
     background-color: var(--bg-main);
 }
 
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    gap: 48px;
     align-items: center;
 }
 
@@ -901,21 +949,22 @@ ul {
    GALLERY (Masonry feel)
    ========================================================================== */
 .gallery {
-    padding: 120px 0;
+    padding: 72px 0;
     background-color: var(--bg-light);
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 18px;
 }
 
 .gallery-img {
     width: 100%;
-    height: 380px;
+    aspect-ratio: 4 / 3;
+    height: auto;
     object-fit: cover;
-    border-radius: var(--radius-sm);
+    border-radius: 18px;
     transition: var(--transition-slow);
     cursor: pointer;
 }
@@ -933,7 +982,7 @@ ul {
    REVIEWS (Soft Cards)
    ========================================================================== */
 .reviews {
-    padding: 120px 0;
+    padding: 72px 0;
     background-color: var(--bg-white);
 }
 
@@ -983,7 +1032,7 @@ ul {
    BOOKING CTA (Ethereal Background)
    ========================================================================== */
 .booking-cta {
-    padding: 150px 0;
+    padding: 96px 0;
     background-color: var(--primary);
     color: var(--bg-white);
     text-align: center;
@@ -1035,14 +1084,14 @@ ul {
    CONTACT
    ========================================================================== */
 .contact {
-    padding: 120px 0;
+    padding: 72px 0;
     background-color: var(--bg-main);
 }
 
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 48px;
     background: var(--bg-white);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -1068,14 +1117,14 @@ ul {
    FOOTER
    ========================================================================== */
 .footer {
-    background-color: #2a2a2a;
-    color: #fff;
+    background-color: #1a1c1a; /* Elegant Dark Charcoal */
+    color: rgba(255, 255, 255, 0.8);
     padding: 100px 0 30px;
 }
 
 .footer-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1.2fr 1.2fr 1.6fr;
     gap: 60px;
     margin-bottom: 60px;
 }
@@ -1087,17 +1136,19 @@ ul {
 }
 
 .footer-brand p {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .footer-col h4 {
-    color: #ffffff; /* Brightened for visibility */
+    color: #ffffff;
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 25px;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .footer-col ul li {
@@ -1105,10 +1156,30 @@ ul {
 }
 
 .footer-col ul a {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
 }
 
 .footer-col ul a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--transition-fast);
+}
+
+.footer-contact a:hover {
     color: var(--secondary);
 }
 
@@ -1400,12 +1471,69 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .container {
+        width: min(100% - 24px, 100%);
+    }
+
+    section {
+        padding: 48px 0;
+    }
+
+    .section-lg {
+        padding: 64px 0;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+    
     .header.scrolled {
         height: 70px;
     }
     
+    .hero {
+        min-height: auto;
+        padding: 48px 0;
+        padding-top: calc(var(--header-height) + 24px);
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .hero-visual {
+        order: -1; /* Move image above text on mobile */
+    }
+    
     .hero-title {
-        font-size: 3.5rem;
+        font-size: clamp(38px, 12vw, 54px);
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 32px 20px;
+    }
+
+    .service-image {
+        max-width: 280px;
+        margin: 0 auto 18px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .why-grid, .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        width: 100%;
     }
     
     .promo-banner {
@@ -1432,7 +1560,7 @@ ul {
     .hero-title { font-size: 2.8rem; }
     .section-title { font-size: 2.2rem; }
     
-    .info-grid, .services-grid, .why-grid, .gallery-grid, .reviews-grid {
+    .info-grid {
         grid-template-columns: 1fr;
     }
     
